@@ -2,28 +2,15 @@
 /**
  * Clase Cuadrado que hereda de "Rectangulo"
  * 
- * @author Rafael Jes�s Nieto Cardador
+ * @author Rafael Jesús Nieto Cardador
  *
  */
-public class Cuadrado extends Rectangulo{
-  
-  private int lado;
+public class Cuadrado extends Rectangulo implements Comparable<Cuadrado>{
   
   //Constructor
   public Cuadrado(int lado) {
-    setLado(lado);
-  }
-  
-  private void setLado(int lado) {
-    if(validaParametros(lado)) {
-      this.lado = lado;
-    }else {
-      throw new ArithmeticException();
-    }
-  }
-  
-  public int getLado() {
-    return this.lado;
+    setAlto(lado);
+    setAncho(getAlto());
   }
   
   //Metodos
@@ -33,31 +20,26 @@ public class Cuadrado extends Rectangulo{
    * @return String
    */
   public String comparaCuadrados(Cuadrado cuadrado) {
-    if (this.getLado() > cuadrado.getLado()) {
+    if (this.getAlto() > cuadrado.getAlto()) {
       return "El primer cuadrado es mayor que el segundo.";
-    }else if(this.getLado() < cuadrado.getLado()) {
+    }else if(this.getAlto() < cuadrado.getAlto()) {
       return "El segundo cuadrado es mayor que el primero.";
     }else {
       return "Ambos cuadrados son iguales.";
     }
   }
   
-  @Override
-  public String toString() {
-    String cadena = "";
-    for(int i = 0; i<this.lado; i++) {
-      for(int j = 0; j<this.lado; j++) {
-        if(i == 0 || i == this.lado-1) {
-          cadena += "##";
-        }else if(j == 0 || j == this.lado-1) {
-          cadena += "##";
-        }else {
-          cadena += "  ";
-        }
-      }
-      cadena += "\n";
-    }  
-    return cadena;
+  public int compareTo(Cuadrado cuadrado) {
+    if (this.getAlto() == cuadrado.getAlto()) {
+      return 0;
+    } else if (this.getAlto() < cuadrado.getAlto()) {
+      return -1;
+    } else {
+      return 1;
+    }
   }
-
+  
+  public boolean equals(Cuadrado cuadrado) {
+    return (getAlto() == cuadrado.getAlto());   
+  }
 }

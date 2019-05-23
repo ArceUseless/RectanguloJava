@@ -1,7 +1,7 @@
 /**
  * Clase de prueba para demostrar el funcionamiento de la clase "Rectangulo"
  * 
- * @author Rafael Jes�s Nieto Cardador
+ * @author Rafael Jesús Nieto Cardador
  *
  */
 public class PruebaRectangulo {

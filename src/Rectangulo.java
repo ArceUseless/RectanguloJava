@@ -1,11 +1,11 @@
 /**
- * Clase rect�ngulo
+ * Clase rectángulo
  * 
  * Atributos:
- *   ancho: Entero que almacena la anchura del rect�ngulo
- *   alto: Entero que almacena la altura del rect�ngulo
+ *   ancho: Entero que almacena la anchura del rectángulo
+ *   alto: Entero que almacena la altura del rectángulo
  * 
- * @author Rafael Jes�s Nieto Cardador
+ * @author Rafael Jesús Nieto Cardador
  *
  */
 public class Rectangulo {
@@ -73,7 +73,7 @@ public class Rectangulo {
   //Metodos
   
   /**
-   * Valida el par�metro que se pasa como argumento
+   * Valida el parámetro que se pasa como argumento
    * @param parametro
    * @return boolean
    */
